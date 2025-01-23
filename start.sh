@@ -26,6 +26,8 @@ fi
 
 curl -sL https://www.dumbpipe.dev/install.sh | sh
 
+chmod +x reverse-proxy
+
 ./dumbpipe listen-tcp --host localhost:8888 &
 
 ./reverse-proxy &
