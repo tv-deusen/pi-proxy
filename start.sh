@@ -37,5 +37,5 @@ cp dumbpipe.service /etc/systemd/system/
 
 ./dumbpipe listen-tcp --host localhost:8888
 
-printf "\n"
-echo "Share that node ID with Tom please"
+# printf "\n"
+# echo "Share that node ID with Tom please"
