@@ -30,10 +30,12 @@ cp dumbpipe /usr/bin/dumbpipe
 chmod 664 dumbpipe.service
 cp dumbpipe.service /etc/systemd/system/
 
-systemctl daemon-reload
-systemctl enable dumbpipe.service
-systemctl start dumbpipe.service
-systemctl status dumbpipe.service
+# systemctl daemon-reload
+# systemctl enable dumbpipe.service
+# systemctl start dumbpipe.service
+# systemctl status dumbpipe.service
+
+./dumbpipe listen-tcp --host localhost:8888
 
 printf "\n"
 echo "Share that node ID with Tom please"
