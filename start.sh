@@ -26,8 +26,14 @@ fi
 
 curl -sL https://www.dumbpipe.dev/install.sh | sh
 
-chmod +x reverse-proxy
+cp dumbpipe /usr/bin/dumbpipe
+chmod 664 dumbpipe.service
+cp dumbpipe.service /etc/systemd/system/
 
-./dumbpipe listen-tcp --host localhost:8888 &
+systemctl daemon-reload
+systemctl enable dumbpipe.service
+systemctl start dumbpipe.service
+systemctl status dumbpipe.service
 
-./reverse-proxy &
+printf "\n"
+echo "Share that node ID with Tom please"
