@@ -1,0 +1,10 @@
+[Unit]
+Description=Dumbpipe Iroh
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/dumbpipe listen-tcp --host localhost:8888
+Type=simple
+
+[Install]
+WantedBy=default.target
